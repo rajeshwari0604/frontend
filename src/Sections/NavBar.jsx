@@ -33,8 +33,8 @@ const NavBar = ({ scrollToTop, scrollToServices }) => {
         SCROLLED ? 'bg-slate-900/70 backdrop-blur shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="flex justify-center items-center py-4 px-6 mx-auto transition-all duration-300">
-        {/* Navigation links */}
+      <div className="flex justify-between items-center py-4 px-6 mx-auto transition-all duration-300">
+        {/* Left: Navigation links */}
         <nav className="hidden lg:flex gap-6 text-sm">
           <button
             onClick={() => handleScrollOrNavigate('top')}
@@ -46,7 +46,7 @@ const NavBar = ({ scrollToTop, scrollToServices }) => {
             onClick={() => handleScrollOrNavigate('services')}
             className="text-gray-100 hover:text-blue-400 transition-all duration-300 font-semibold tracking-wide"
           >
-            Services
+            Features
           </button>
           {NAVBAR_LINKS.map((link, index) => (
             <Link
@@ -60,17 +60,19 @@ const NavBar = ({ scrollToTop, scrollToServices }) => {
         </nav>
 
         {/* Center: Brand */}
-        <div className="text-center flex-1 text-sm sm:text-base lg:text-lg font-extrabold bg-gradient-to-r from-[#428DFF] to-[#275599] text-transparent bg-clip-text">
-          <Link to="/">SIGN2TEXT</Link>
+        <div className="text-center flex-1 lg:flex-none text-xl lg:text-2xl font-extrabold">
+          <Link to="/" className="bg-gradient-to-r from-[#428DFF] to-[#275599] text-transparent bg-clip-text">
+            SIGN2TEXT
+          </Link>
         </div>
 
-        {/* Appointment & Hamburger */}
+        {/* Right: CTA & Hamburger */}
         <div className="flex items-center gap-4">
           <Link
-            to="/appointments"
-            className="bg-[#D9D9D9] text-black rounded-2xl border-2 border-black px-4 py-2 text-sm font-semibold hover:bg-gray-400 transition duration-300 hidden md:block"
+            to="/demo"
+            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-2xl px-6 py-2 text-sm font-semibold hover:scale-105 transition duration-300 hidden md:block shadow-lg"
           >
-            Book Appointment
+            Try Demo
           </Link>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -83,7 +85,7 @@ const NavBar = ({ scrollToTop, scrollToServices }) => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-slate-900/90 px-6 py-4 animate-fade-in-down space-y-4">
+        <div className="lg:hidden bg-slate-900/90 backdrop-blur px-6 py-4 animate-fade-in-down space-y-4">
           <button
             onClick={() => handleScrollOrNavigate('top')}
             className="block text-gray-100 hover:text-blue-400 text-base font-semibold transition-colors duration-300"
@@ -94,7 +96,7 @@ const NavBar = ({ scrollToTop, scrollToServices }) => {
             onClick={() => handleScrollOrNavigate('services')}
             className="block text-gray-100 hover:text-blue-400 text-base font-semibold transition-colors duration-300"
           >
-            Services
+            Features
           </button>
           {NAVBAR_LINKS.map((link, index) => (
             <Link
@@ -107,17 +109,17 @@ const NavBar = ({ scrollToTop, scrollToServices }) => {
             </Link>
           ))}
           <Link
-            to="/appointments"
+            to="/demo"
             onClick={() => setMenuOpen(false)}
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-2 font-bold mt-4 block text-center"
+            className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg px-4 py-2 font-bold mt-4 block text-center"
           >
-            Book Appointment
+            Try Demo
           </Link>
         </div>
       )}
 
       {/* Divider Line */}
-      <div className="p-[2px] bg-gradient-to-r from-gray-700 to-gray-900" />
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent" />
 
       {/* CSS Animations */}
       <style jsx>{`

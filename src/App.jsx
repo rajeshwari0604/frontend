@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import NavBar from "./Sections/NavBar";
 import Hero from "./Sections/Hero";
 import Services from "./Sections/Services";
@@ -8,7 +8,7 @@ import Footer from "./Sections/Footer";
 import Blogs from "./Pages/Blogs";
 import Mirror from "./Components/Mirror";
 import Experience from "./Sections/Experience";
-import Doctors from "./Pages/Doctors";
+import Team from "./Pages/Doctors";
 import Reviews from "./Pages/Reviews";
 
 const Home = () => {
@@ -60,9 +60,9 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/doctors" element={<Doctors />} />
-        <Route path="/reviews" element={<Reviews />}/>
+        <Route path="/about" element={<Blogs />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/demo" element={<Reviews />}/>
       </Routes>
     </Router>
   );

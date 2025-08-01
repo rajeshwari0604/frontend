@@ -1,165 +1,138 @@
 const NAVBAR_LINKS = [
-    { name: "Doctors", link: "/doctors", className: "hover:text-gray-400"},
-    { name: "Reviews", link: "/reviews", className: "hover:text-gray-400"},
+    { name: "About", link: "/about", className: "hover:text-gray-400"},
+    { name: "Team", link: "/team", className: "hover:text-gray-400"},
+    { name: "Demo", link: "/demo", className: "hover:text-gray-400"},
 ];
 
-const abilities = [
+const features = [
   {
-    imgPath: "/expertise.png",
-    title: "Specialized Expertise",
-    desc: "Over a decade of experience in obstetrics and gynecology, ensuring expert care across every stage of a woman’s health.",
+    title: "Real-Time Translation",
+    desc: "Advanced computer vision and machine learning technology to recognize sign language gestures and instantly convert them into text with sub-100ms latency.",
   },
   {
-    imgPath: "/compassion.png",
-    title: "Compassionate Care",
-    desc: "Providing patient-centered care with empathy, respect, and understanding in every interaction.",
+    title: "Pose Estimation",
+    desc: "Utilizes MediaPipe and OpenPose for precise 2D/3D keypoint detection of hands, arms, and body landmarks for accurate gesture interpretation.",
   },
   {
-    imgPath: "/trust.png",
-    title: "Trust & Transparency",
-    desc: "Building strong patient relationships through honest communication and shared decision-making.",
+    title: "Deep Learning Architecture",
+    desc: "Hybrid CNN-LSTM architecture combining ResNet-50/MobileNetV2 for spatial features and Bi-LSTM for temporal sequence modeling.",
   },
   {
-    imgPath: "/innovation.png",
-    title: "Advanced Technology",
-    desc: "Utilizing the latest medical advancements and diagnostic tools to offer the highest standard of care.",
+    title: "Natural Language Processing",
+    desc: "GPT-3.5 integration for coherent sentence reconstruction from classified gesture sequences, ensuring grammatically correct output.",
   },
   {
-    imgPath: "/support.png",
-    title: "Continuity of Care",
-    desc: "Offering consistent, long-term support tailored to each patient's unique journey through womanhood.",
+    title: "Cross-Platform Deployment",
+    desc: "Optimized for web applications, kiosks, and assistive tools with ONNX model conversion for browser-friendly deployment.",
   },
   {
-    imgPath: "/education.png",
-    title: "Patient Education",
-    desc: "Empowering women with clear, accurate information to make confident, informed health decisions.",
+    title: "Accessibility Focus",
+    desc: "Designed to bridge communication gaps in healthcare, education, and public services, promoting inclusion and independence.",
   },
 ];
 
-const doctors = [
+const teamMembers = [
   {
-    name: 'Dr. Pamela Narayan',
-    title: 'Neurophysiotherapist',
-    bio: `Pioneer in neurorehabilitation and physiotherapy for bleeding disorders. Faculty, presenter, and researcher with global impact.`,
+    name: 'Rajeshwari Akella',
+    role: 'Lead Developer',
+    hallTicket: '245322733133',
+    bio: 'Specializing in computer vision and deep learning architectures. Leading the pose estimation and feature extraction modules.',
     expertise: [
-      'Post-stroke neurorehab',
-      'Spasticity & dysphagia treatment',
-      'Constraint-induced therapy',
-      'Hemophilia MSK rehab',
-      'Training across South Asia'
+      'Computer Vision',
+      'Deep Learning',
+      'Pose Estimation',
+      'Feature Extraction',
+      'Model Optimization'
     ],
-    photo: 'https://images.unsplash.com/photo-1588776814546-ec7c5d61c61b?fit=crop&w=500&h=500&q=80',
-    testimonial: 'Dr. Pamela’s impact on neurorehabilitation has been transformative. Her knowledge, warmth, and global leadership truly set her apart.',
-    timeline: [
-      {
-        title: 'BPT – CMC Vellore',
-        date: '1991',
-        logoPath: 'https://cdn-icons-png.flaticon.com/512/921/921347.png',
-        responsibilities: [
-          'Graduated with foundational physiotherapy training.',
-          'Laid early interest in neuro-based patient care.',
-          'Became a strong advocate for integrated rehab approaches.'
-        ]
-      },
-      {
-        title: 'MSc Neurophysiotherapy – Univ. of East London',
-        date: '1997',
-        logoPath: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
-        responsibilities: [
-          'Deepened clinical focus on neurorehabilitation.',
-          'Researched post-stroke and head injury recovery protocols.',
-          'Built global networks in physiotherapy education.'
-        ]
-      }
-    ]
+    photo: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?fit=crop&w=500&h=500&q=80',
   },
   {
-    name: 'Dr. Sriram Chandra Damaraju',
-    title: 'Neurosurgeon',
-    bio: `25+ years in brain, spine, and pediatric neurosurgery. CMC-trained, multilingual, and a veteran in craniofacial procedures.`,
+    name: 'CH. Thanu Sree',
+    role: 'ML Engineer',
+    hallTicket: '245322733138',
+    bio: 'Expert in sequence modeling and temporal analysis. Responsible for LSTM implementation and gesture classification systems.',
     expertise: [
-      'Brain tumour surgery',
-      'Stroke & spinal neurosurgery',
-      'Pediatric neurosurgery',
-      'Craniofacial reconstruction'
+      'Sequence Modeling',
+      'LSTM Networks',
+      'Temporal Analysis',
+      'Gesture Classification',
+      'PyTorch Development'
     ],
-    photo: 'https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?fit=crop&w=500&h=500&q=80',
-    testimonial: 'Dr. Sriram is a master of precision. His hands and heart both bring healing. Patients trust him with their lives—and rightly so.',
-    timeline: [
-      {
-        title: 'MBBS – Osmania Medical College',
-        date: '1995',
-        logoPath: 'https://cdn-icons-png.flaticon.com/512/4201/4201012.png',
-        responsibilities: [
-          'Completed foundational training in medicine.',
-          'Discovered passion for neurosurgery during rotations.',
-          'Built core knowledge in brain and spine anatomy.'
-        ]
-      },
-      {
-        title: 'MCh Neurosurgery – CMC Vellore',
-        date: '2003',
-        logoPath: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
-        responsibilities: [
-          'Specialized in complex brain and spine surgeries.',
-          'Performed groundbreaking craniofacial reconstructions.',
-          'Mentored junior surgeons across multiple states.'
-        ]
-      }
-    ]
+    photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fit=crop&w=500&h=500&q=80',
+  },
+  {
+    name: 'Sunkari Praneeth Narayan',
+    role: 'NLP Specialist',
+    hallTicket: '245322733060',
+    bio: 'Focused on natural language processing and text generation. Implementing GPT-3.5 integration for sentence reconstruction.',
+    expertise: [
+      'Natural Language Processing',
+      'Text Generation',
+      'GPT Integration',
+      'Sentence Reconstruction',
+      'API Development'
+    ],
+    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=500&h=500&q=80',
   }
 ];
 
-const testimonials = [
+const supervisor = {
+  name: 'Dr. R. SriLakshmi',
+  title: 'Assistant Professor, CSE',
+  bio: 'Supervising the Sign2Text project with expertise in machine learning, computer vision, and assistive technologies.',
+  photo: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?fit=crop&w=500&h=500&q=80',
+};
+
+const projectStats = [
   {
-    name: "Aditi Sharma",
-    date: "March 15, 2023",
-    imgPath: "/patient1.jpg",
-    feedback: "Dr. Pamela's care transformed my recovery journey. Her expertise and compassion made all the difference.",
+    value: "100ms",
+    label: "Processing Latency",
+    description: "Sub-100ms frame processing for real-time interaction"
   },
   {
-    name: "Rajesh Kumar",
-    date: "April 10, 2023",
-    imgPath: "/patient2.jpg",
-    feedback: "I can't thank Dr. Sriram enough for his skill and dedication. He gave me my life back after my surgery.",
+    value: "500+",
+    label: "Sign Vocabulary",
+    description: "Expandable vocabulary starting with LSA64 dataset"
   },
   {
-    name: "Priya Mehta",
-    date: "May 5, 2023",
-    imgPath: "/patient3.jpg",
-    feedback: "The entire team at the clinic is amazing! They truly care about their patients and it shows.",
+    value: "4",
+    label: "Core Modules",
+    description: "Pose estimation, feature extraction, sequence modeling, text generation"
+  }
+];
+
+const methodology = [
+  {
+    stage: "Pose Estimation",
+    description: "Extract skeletal keypoints using MediaPipe/OpenPose for hands, arms, and body landmarks",
+    tools: ["MediaPipe", "OpenPose"],
+    output: "2D/3D spatial coordinates"
   },
   {
-    name: "Amit Patel",
-    date: "June 20, 2023",
-    imgPath: "/patient4.jpg",
-    feedback: "Dr. Pamela's expertise and compassion made all the difference. I highly recommend her.",
+    stage: "Feature Extraction", 
+    description: "Process frames through CNN-based models for spatial feature representation",
+    tools: ["ResNet-50", "MobileNetV2"],
+    output: "High-dimensional feature vectors"
   },
   {
-    name: "Neha Gupta",
-    date: "July 15, 2023",
-    imgPath: "/patient5.jpg",
-    feedback: "Dr. Sriram's surgical precision and post-operative care were exceptional. I'm grateful for his care.",
+    stage: "Sequence Modeling",
+    description: "Analyze temporal dynamics using bidirectional LSTM networks",
+    tools: ["Bi-LSTM", "PyTorch"],
+    output: "Classified gesture sequences"
   },
-  
   {
-    name: "Neha Gupta",
-    date: "July 15, 2023",
-    imgPath: "/patient5.jpg",
-    feedback: "Dr. Sriram's surgical precision and post-operative care were exceptional. I'm grateful for his care.",
-  },
-  
-  {
-    name: "Neha Gupta",
-    date: "July 15, 2023",
-    imgPath: "/patient5.jpg",
-    feedback: "Dr. Sriram's surgical precision and post-operative care were exceptional. I'm grateful for his care.",
+    stage: "Text Generation",
+    description: "Reconstruct coherent sentences using natural language processing",
+    tools: ["GPT-3.5", "NLP Models"],
+    output: "Grammatically correct text"
   }
 ];
 
 export {
     NAVBAR_LINKS,
-    abilities,
-    doctors,
-    testimonials,
+    features,
+    teamMembers,
+    supervisor,
+    projectStats,
+    methodology,
 }
