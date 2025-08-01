@@ -1,0 +1,35 @@
+.mirror-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(#0a0f1a, #000);
+}
+
+.circle {
+  width: 60vw;
+  max-width: 18rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.23);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.card-1 {
+  transform: translateX(-28vw) scale(0.8);
+  z-index: 1;
+}
+.card-2 {
+  transform: translateX(0) scale(1);
+  z-index: 2;
+}
+.card-3 {
+  transform: translateX(28vw) scale(0.8);
+  z-index: 1;
+}
